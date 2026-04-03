@@ -1893,27 +1893,6 @@ function toast(msg,dur=2200){const el=document.getElementById('toast');el.textCo
 
 // ══ INIT ══
 loadData();
-if(!notes.length){
-  const sampleRaw=`As if that wasn't enough, this year also marks the centenary of the Czechoslovak pavilion.
-[그것만으로도 부족했다는 듯, 올해는 체코슬로바키아 파빌리온의 100주년이기도 합니다.]
-@marks: (중요한 시점을) 기념하다, 나타내다
-@centenary: 100주년 (= 100th anniversary)
-
-We are therefore presenting the exhibition as a joint project of two formerly united countries.
-[따라서 우리는 이 전시를 과거에 하나였던 두 나라의 공동 프로젝트로 선보입니다.]
-@therefore: 따라서, 그러므로
-@joint project: 공동 프로젝트
-
-The project unfolds as a story about the abduction of imagination into the hands of soft power.
-[이 프로젝트는 상상력이 소프트 파워의 손에 납치되는 이야기로 펼쳐집니다.]
-@unfolds: (이야기가) 펼쳐지다, 전개되다
-@abduction: 납치, 유괴`;
-  folders.push({id:'f1',name:'예시 폴더',parentId:null});
-  openFolders.add('f1');
-  tags.push({id:'t1',name:'예술',fg:'#2D4A8C',bg:'#EEF1FA'},{id:'t2',name:'전시',fg:'#1A5C3A',bg:'#E8F5EE'});
-  notes=[{id:'sample',title:'Venice Pavilion 예시',tags:['예술','전시'],folderId:'f1',raw:sampleRaw,sentences:parseRaw(sampleRaw),createdAt:new Date().toLocaleDateString('ko-KR')}];
-  saveData();
-}
 applyPrefs();
 activeId=notes[0]?.id||null;
 renderTree();
